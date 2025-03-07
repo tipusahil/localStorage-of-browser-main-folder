@@ -25,3 +25,17 @@ console.log(after_converted_JSON_stringify);// output: {"name":"tipu","age":22}
 localStorage.setItem("add1" , "add1 er value ami ")
 const getdata = localStorage.getItem("add1");
 console.log(getdata)
+
+const object2 = {age:222 ,name:"stringify"}
+const setObjectToBrowser_localStorage_by_JSON_stringify = JSON.stringify(object2);//object e json.stringify e converted kroa hoise
+
+
+const getObjectFrom_localStorage = localStorage.setItem("object2" , setObjectToBrowser_localStorage_by_JSON_stringify)
+// string e convert kroa obj k local browser er localStorage e set kora hoise,  nise seta print kore check kora hoise add hoise kina.
+
+
+console.log(setObjectToBrowser_localStorage_by_JSON_stringify);
+console.log(getObjectFrom_localStorage);
+
+
+
