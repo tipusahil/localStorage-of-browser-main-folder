@@ -4,6 +4,7 @@
 
 ##eta korar karon hocce 
 
+
 */
 
 const object1 = {name:'tipu' , age:22};
