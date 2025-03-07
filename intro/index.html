@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro of localStorage of browser</title>
+</head>
+
+<body>
+
+    <!-- 
+    1.localStorage.getItem("kuno data get/pete caile sei key/variable name ekane quetion e vitore likte hbe")
+ 2.localStorage.setItem("key" , "value");// kuno item/data set korte caile key/variable name then komar pore value dite hobe (must must must) sob ketre quetion er vitore rakte hbe, remove/get/set jetai korina keno key/variable name ta quetetion er vitore rakte hbe.
+ 3.localStorage.removeItem("kuno item/data remove/delete korte caile seta evabe quetion er vtiore key/varaible name ta dite hobe.")
+
+ 4.localStorage.clear() // browser er localStorage e ja data takbe sob rmove hobe jabe.
+ 5.localStorage.length("jey varialbe er lengh dekte cai setar name dile length koto dekabe.")
+ 6.full localStorage e koita data ase setar length dekte caile  localStorage.length()// koita data localStorage set kroa ase sob gulo milai length dekabe.
+ 
+
+
+
+
+ -------------------------------------------
+localStorage e object set korte caile ( JSON.Stringify(objectName) )ei method er maddome browser e object set korte hbe. & browser e object jeheto Stringify convert korle jmn hoi omne thake tai seta abr access korte cailew
+ ( JSON.parse(string_converted_object_name) ) evabe access korte hbe.
+& 
+
+-->
+    <ol>
+        <li>browser er console e application tab e giye (esc) btn press korlei oi application tab er jonno console open
+            hobe, okane js code kora jabe</li>
+        <li>localStorage er kuno varaible & tar value access korte caile : localStorage.getItem("keyName") evbe likle oi
+            (keyName) varaible er vlaue pawa jave.</li>
+        <li>localStorage.clear() eta dile localStorage e ja data thakbe sob delete/clear hye jabe. </li>
+
+        <li>localStorage e kisu set korte caile varabile/key k quetetion er vtore rakte hobe & value kew quetetion er
+            vitore rakte hbe jmn:
+            <br> localStorage.setItem("key/varaible", "value")
+            <br> localStorage.setItem("money", 320) <br>
+            localStorage.setItem('phone' , "samsumng")
+
+        </li>
+        <li>kuno varaible knba key er typeof check korte caile jevabe check korte hbe:<br>
+            typeof localStorage.getItem("phone") // string <br>
+
+
+        </li>
+        <li>localStorage theke kuno data/varaible/key remove korte caile : <br>
+            localStorage.removeItem("money") // output: money data ta remove hoye jabe.
+
+        </li>
+        <li>localStorage e array/object store korte caile seta string akare ortat quetion er vitore rakte kuno 2nd/3rd
+            bracket show korbena.jmn: <br> localStorage.setItem("array", [2,3,4,3,4]) <br>
+
+            localStorage.getItem("array") //ouptut:'2,3,4,3,4' >evabe string akare dekabe 2nd bracket dekabena
+
+
+
+        </li>
+        <li>localStorage e object set korte caile: localStorage.setItem( "object1" , {name:"tipu" , age:22} ) <br>
+
+
+
+        </li>
+
+    </ol>
+
+
+</body>
+
+</html>
