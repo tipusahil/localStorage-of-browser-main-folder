@@ -82,6 +82,7 @@ const show_saved_Cart_to_ui_fromlocalstorage =  () => {
 for(const cart1 in saved_carts) {
     console.log(cart1);// shudo key pete caile
 
+    
     const quantity = saved_carts[cart1];
 
     console.log(cart1 , quantity )
