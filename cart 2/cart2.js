@@ -46,17 +46,6 @@ const setCartToLocalStorage = localStorage.setItem('cart' ,userInputValue_ASaCar
 
 
 }
-// -----------------------------------------------------------
-
-const get_saved_Cart_fromlocalstorage =  () => {
-    const saved_carts = localStorage.getItem('cart');
-for(const cart1 in saved_carts)  {
-    console.log(cart1)
-}
-}
-
-get_saved_Cart_fromlocalstorage()
-// -----------------------------------------------------------
 
 // ------------------------------------------------- get cart from localStorage else set mt cart/objct to localStorage
 const getCart2_From_LocalStorage =() => {
@@ -82,5 +71,29 @@ const getCart2_From_LocalStorage =() => {
 
 
 }
+
+
+// -----------------------------------------------------------
+
+const show_saved_Cart_to_ui_fromlocalstorage =  () => {
+    const saved_carts = getCart2_From_LocalStorage();
+
+    console.log(saved_carts)//full obj/cart e ja data ase sob pete caile
+for(const cart1 in saved_carts) {
+    console.log(cart1);// shudo key pete caile
+
+    const quantity = saved_carts[cart1];
+
+    console.log(cart1 , quantity )
+    displaytoUi( cart1 , quantity);
+}
+}
+
+// show_saved_Cart_to_ui_fromlocalstorage()
+// -----------------------------------------------------------
+
+
+
+show_saved_Cart_to_ui_fromlocalstorage()
 // const returned_pawa_cart2_obj = getCart2_From_LocalStorage()
 // console.log(returned_pawa_cart2_obj)
