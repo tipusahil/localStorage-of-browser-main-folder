@@ -10,9 +10,14 @@ const addcart2 = () =>{
  const product = pruduct_input_field.value;
  const quantity = pruduct_quantity_input_field.value;
 
+ pruduct_input_field.value = '';
+ pruduct_quantity_input_field.value = '';
+
 console.log(product , quantity);
 
 displaytoUi(product , quantity); // input value push pass to (displaytoUi) function
+
+saveUserInputValue_as_aCart_to_localStorage( product , quantity)
 }
 
 
@@ -24,8 +29,36 @@ const displaytoUi = (productName , product_quantity) => {
 
     ol.appendChild(li);
 }
+// -------------------------------------------------
 
 
+// ------------------------------------------------- save/set UserInputValue as a Cart to localStorage
+
+const saveUserInputValue_as_aCart_to_localStorage = (product , quantity) => {
+const returned_pawa_cart2_obj = getCart2_From_LocalStorage()// return pawa mt cart/obj ta
+
+returned_pawa_cart2_obj[product] = quantity; // return pawa mt cart/obj e user er dewa productname & quantity ta set (product) name ekta property (bracket noteeiton) diye lika tar value hisebe quantity ta set kore dewa hoise, & tarpor set korar pore sei objta 
+
+const userInputValue_ASaCart_mt_obj_e_set_korar_pore_seta_stringify_e_convert = JSON.stringify(returned_pawa_cart2_obj);
+
+const setCartToLocalStorage = localStorage.setItem('cart' ,userInputValue_ASaCart_mt_obj_e_set_korar_pore_seta_stringify_e_convert );
+
+
+
+}
+// -----------------------------------------------------------
+
+const get_saved_Cart_fromlocalstorage =  () => {
+    const saved_carts = localStorage.getItem('cart');
+for(const cart1 in saved_carts)  {
+    console.log(cart1)
+}
+}
+
+get_saved_Cart_fromlocalstorage()
+// -----------------------------------------------------------
+
+// ------------------------------------------------- get cart from localStorage else set mt cart/objct to localStorage
 const getCart2_From_LocalStorage =() => {
     let mt_obj_or_cart = {};
 
@@ -49,5 +82,5 @@ const getCart2_From_LocalStorage =() => {
 
 
 }
-const returned_pawa_cart2_obj = getCart2_From_LocalStorage()
-console.log(returned_pawa_cart2_obj)
+// const returned_pawa_cart2_obj = getCart2_From_LocalStorage()
+// console.log(returned_pawa_cart2_obj)
